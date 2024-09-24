@@ -2,8 +2,12 @@ function sortear (){
     let quantidade = parseInt(document.getElementById('quantidade').value);
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
-    if(de >= ate){
-        alert('Intervalo inválido. O numero inicial não pode ser maior que o numero final. Tente Novamente !')
+    //solução do instrutor
+    //if (quantidade > (ate - de + 1))
+    //minha solução
+    //if(de >= ate || quantidade >= de || quantidade >= ate ){
+    if (quantidade > (ate - de + 1)){
+        alert('Intervalo inválido. O numero DE: não pode ser maior que o numero ate:  a quantidade não pode ser maior ou igual a de:  Tente Novamente !')
         return;
         
     } 
