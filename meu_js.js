@@ -3,10 +3,10 @@ function sortear (){
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
     if(de >= ate){
-        alert('Intervalo inválido. O numero inicial não pode ser maior que o numero final. Tente Novamente !')
-        return;
+        alert('Intervalo inválido. O numero inicial não pode ser maior que o numero final. Tente Novamente!')
+        reiniciar();
         
-    } 
+    } else {
         let sorteados = [];
         let numero;
         for(let i=0; i< quantidade; i++){
@@ -24,7 +24,7 @@ function sortear (){
     
     alterarStatusDoBotao();
     
-
+}
 
 function obterNumeroAleatorio(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -47,4 +47,3 @@ function reiniciar(){
     document.getElementById('resultado').innerHTML='<label class="texto__paragrafo">Números sorteados:  nenhum até agora</label>';
     alterarStatusDoBotao();
 }
-
